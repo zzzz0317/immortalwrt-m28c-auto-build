@@ -1,0 +1,10 @@
+. /lib/functions/uci-defaults.sh
+
+board_config_update
+
+ucidef_set_hostname "zzM28C"
+ucidef_set_root_password_plain "m28cm28c"
+ucidef_set_country "CN"
+ucidef_set_wireless "all" "zzM28C" "psk2+ccmp" "m28cm28c"
+
+board_config_flush
