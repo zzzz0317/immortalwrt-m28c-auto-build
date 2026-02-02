@@ -17,6 +17,14 @@ uci commit
 # uci set qmodem.main.at_tool='1'
 uci commit qmodem
 
+uci set bandix.traffic.enabled='1'
+uci set bandix.traffic.traffic_persist_history='1'
+uci set bandix.traffic.traffic_flush_interval_seconds='300'
+uci set bandix.connections.enabled='1'
+uci set bandix.dns.enabled='1'
+uci commit bandix
+/etc/init.d/bandix restart
+
 uci -q set zz_config.@status[0].first_boot=0
 uci commit zz_config
 
