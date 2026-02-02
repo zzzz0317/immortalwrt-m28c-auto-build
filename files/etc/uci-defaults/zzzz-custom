@@ -15,7 +15,8 @@ uci commit
 /etc/init.d/network reload
 
 # uci set qmodem.main.at_tool='1'
-uci commit qmodem
+# uci commit qmodem
+sed -i '/qmodem/d' /etc/apk/repositories.d/distfeeds.list
 
 uci set bandix.traffic.enabled='1'
 uci set bandix.traffic.traffic_persist_history='1'
